@@ -1,3 +1,6 @@
+==> saas_kit
+Compiling 14 files (.ex)
+Generated saas_kit app
 import Config
 
 # config/runtime.exs is executed for all environments, including
@@ -33,7 +36,7 @@ if config_env() == :prod do
   config :skill_pot, SkillPot.Repo,
     # ssl: true,
     url: database_url,
-    pool_size: String.to_integer(System.get_env("POOL_SIZE") || "10"),
+    pool_size: String.to_integer(System.get_env("POOL_SIZE") || "3"),
     # For machines with several cores, consider starting multiple pools of `pool_size`
     # pool_count: 4,
     socket_options: maybe_ipv6
